@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedBy;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -31,4 +32,9 @@ public class Post {
 
   @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
   private Set<Comment> comments = new HashSet<>();
+
+  @CreatedBy
+  @Column(name = "created_by", nullable = false)
+  private String createdBy;
+
 }

@@ -4,6 +4,7 @@ package com.mikro.blog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedBy;
 
 import javax.persistence.*;
 
@@ -25,5 +26,9 @@ public class Comment {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "post_id", nullable = false)
   private Post post;
+
+  @CreatedBy
+  @Column(name = "created_by", nullable = false)
+  private String createdBy;
 
 }
