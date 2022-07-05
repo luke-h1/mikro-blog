@@ -2,6 +2,8 @@ package com.mikro.blog.controller;
 
 import com.mikro.blog.payload.CommentDto;
 import com.mikro.blog.service.CommentService;
+import com.mikro.blog.payload.CommentDto;
+import com.mikro.blog.service.CommentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
@@ -15,18 +17,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 public class CommentController {
-
   private CommentService commentService;
 
   public CommentController(CommentService commentService) {
     this.commentService = commentService;
   }
 
+
   @ApiOperation(value = "Create a new comment")
   @PostMapping("/posts/{postId}/comments")
   public ResponseEntity<CommentDto> createComment(@Valid @PathVariable(value = "postId") long postId, @RequestBody CommentDto commentDto) {
     return new ResponseEntity<>(commentService.createComment(postId, commentDto), HttpStatus.CREATED);
   }
+
 
   @ApiOperation(value = "Get all comments")
   @GetMapping("/posts/{postId}/comments")
