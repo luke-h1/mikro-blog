@@ -37,6 +37,7 @@
   "scripts": {
     "prepare": "husky install",
     "clean": "lerna clean -y",
+    "start:server": "cd src/server && mvn spring-boot:run",
     "bootstrap": "lerna bootstrap --ci --force-local",
     "bootstrap:install": "lerna bootstrap --force-local",
     "bootstrap:prod": "lerna bootstrap --ci --force-local -- --only=prod",
