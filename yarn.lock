@@ -937,10 +937,10 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@next/eslint-plugin-next@^12.0.3":
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.2.0.tgz#38b36d3be244cc9a98c0e7d203bdb062f87df4ac"
-  integrity sha512-nIj5xV/z3dOfeBnE7qFAjUQZAi4pTlIMuusRM6s/T6lOz8x7mjY5s1ZkTUBmcjPVCb2VIv3CrMH0WZL6xfjZZg==
+"@next/eslint-plugin-next@^12.3.4":
+  version "12.3.4"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.3.4.tgz#e7dc00e2e89ed361f111d687b8534483ec15518b"
+  integrity sha512-BFwj8ykJY+zc1/jWANsDprDIu2MgwPOIKxNVnrKvPs+f5TPegrVnem8uScND+1veT4B7F6VeqgaNLFW1Hzl9Og==
   dependencies:
     glob "7.1.7"
 
